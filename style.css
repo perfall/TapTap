@@ -1,0 +1,84 @@
+html, body { 
+    margin:0;
+    padding:0;
+    overflow:hidden;
+}
+
+svg { 
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-image: radial-gradient(circle, #203f58 25%, #536878 90%)
+}
+
+
+#playButtonText {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
+}
+/*.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+h6, h5, h4, h3 ,h2, h1 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+
+.top-buffer {
+    margin-top:40px; 
+}
+
+.top-buffer-lg {
+    margin-top:30%; 
+}
+
+.top-buffer-xl {
+    margin-top:60%; 
+}
+
+.top-buffer-md {
+    margin-top:15px; 
+}
+
+.top-buffer-sm {
+    margin-top:4px; 
+}
+
+.bottom-buffer {
+    margin-bottom:10px; 
+}
+
+.btn-large {
+    padding: 18px 28px;
+    font-size: 15px; //change this to your desired size
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+}
+
+.btn-xl {
+    padding: 18px 28px;
+    font-size: 30px; //change this to your desired size
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+}
+*/
