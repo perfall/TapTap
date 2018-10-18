@@ -74,7 +74,7 @@ $(document).ready(function() {
         svg.append("circle")
             .attr("cx", "50%")
             .attr("cy", "50%")
-            .attr("r", "1000")
+            .attr("r", "10000")
             .style("fill", "red")
             .style("opacity", "0.25")
             .transition()
