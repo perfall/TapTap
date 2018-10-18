@@ -28,7 +28,7 @@ svg {
 }
 
 circle, text {
-  cursor: hover;
+  cursor: pointer;
 }
 /*.col-centered{
     float: none;
