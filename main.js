@@ -29,7 +29,7 @@ $(document).ready(function() {
         playButton
             .transition()
             .duration(750)
-            .attr("r", 1000)
+            .attr("r", 10000)
         playing = true;
     }
 
