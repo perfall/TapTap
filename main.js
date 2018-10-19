@@ -35,7 +35,7 @@ $(document).ready(function() {
 
     function drawCircle() {
         if (playing) {
-            if((Math.random()*100) < ((20 + parseInt($("#score").text()))/2) & activeCircles.length < 7){
+            if((Math.random()*100) < (20 + parseInt($("#score").text())) & activeCircles.length < 7){
                 circleId++;
                 currentCircle = svg.append("circle")
                     .classed("expandingCircle", true)
