@@ -9,6 +9,10 @@ $(document).ready(function() {
     if (canVibrate && !("vibrate" in navigator))
     navigator.vibrate = navigator.mozVibrate;
 
+    
+    // iPhone clicks
+    var clickHandler = ('ontouchstart' in document.documentElement ? "touchstart" : "click");
+
     svg = d3.select("svg");
   
     playButton = d3.select("#playButton")
@@ -52,14 +56,22 @@ $(document).ready(function() {
                         .duration(2000)
                         .attr("r", 0)
                     
-                    $("#p"+circleId).on("click",function(){
+                    $("#p"+circleId).bind(clickHandler, function(e) {
                         navigator.vibrate(10);
                         $(this).attr('clicked', true);
                         $("#score").text(parseInt($("#score").text()) + 1)
                         d3.select(this).remove();
                         var index = activeCircles.indexOf("#"+this.id);
                         activeCircles.splice(index, 1);
-                    })
+                    });
+                    // $("#p"+circleId).on("click",function(){
+                    //     navigator.vibrate(10);
+                    //     $(this).attr('clicked', true);
+                    //     $("#score").text(parseInt($("#score").text()) + 1)
+                    //     d3.select(this).remove();
+                    //     var index = activeCircles.indexOf("#"+this.id);
+                    //     activeCircles.splice(index, 1);
+                    // })
                 activeCircles.push("#p"+circleId)
             }
         }
