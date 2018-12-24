@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- My CSS-->
+    <link rel="stylesheet" type="text/css" href='style.css'>
+
+    <title>M.A.O</title>
+  </head>
+  <body>
+    <div class="container" id="content1" style="display:block">
+        <div class="row top-buffer">
+            <div class="col text-center">
+                <h1>M.A.O</h1>
+            </div>
+        </div>
+        <div class="row top-buffer-sm">
+            <div class="col text-center">
+                <h5>Number of teams</h5>
+            </div>
+        </div>
+        <div class="row buttonGroup1">
+            <div class="col text-center">
+                <button type="button" value="2" class="btn btn-dark btn-large"><h5>2</h5></button>
+                <button type="button" value="3" class="btn btn-dark btn-large">3</button>
+                <button type="button" value="4" class="btn btn-dark btn-large">4</button>
+                <button type="button" value="5" class="btn btn-dark btn-large">5</button>
+            </div>
+        </div>
+        <div class="row top-buffer-md">
+            <div class="col text-center">
+                <h5>Number of rounds</h5>
+            </div>
+        </div>
+        <div class="row buttonGroup2">
+            <div class="col text-center">
+                <button type="button" value="1" class="btn btn-dark btn-large">1</button>
+                <button type="button" value="2" class="btn btn-dark btn-large">2</button>
+                <button type="button" value="3" class="btn btn-dark btn-large"><h5>3</h5></button>
+                <button type="button" value="4" class="btn btn-dark btn-large">4</button>
+                <button type="button" value="5" class="btn btn-dark btn-large">5</button>
+            </div>
+        </div>
+        <div class="row top-buffer-md">
+            <div class="col text-center">
+                <h5>Time per turn</h5>
+            </div>
+        </div>
+        <div class="row buttonGroup3">
+            <div class="col text-center">
+                <button type="button" value="1" class="btn btn-dark btn-large">1</button>
+                <button type="button" value="30" class="btn btn-dark btn-large">30</button>
+                <button type="button" value="45" class="btn btn-dark btn-large"><h5>45</h5></button>
+                <button type="button" value="60" class="btn btn-dark btn-large">60</button>
+            </div>
+        </div>
+        <div class="row top-buffer-md">
+            <div class="col text-center">
+                <h5>Rules</h5>
+                <p>Explain the word using synonyms, opposites or clues so that your team mate(s) guess as many words as possible before the timer runs out. The team with the highest score in the end wins.</p>
+            </div>
+        </div>
+        <div class="row bottom-buffer fixed-bottom">
+            <div class="col text-center">
+                <button type="button" id="startButton" class="btn btn-dark btn-xl">START</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="content2" style="display:none">
+        <div class="row top-buffer">
+            <div class="col text-center">
+                <h4 class="scoreBox">Team 1, score: 0p</h4>
+            </div>
+        </div>
+        <div class="row top-buffer-md">
+            <div class="col text-center">
+                <h4>Timer</h4>
+            </div>
+        </div>
+        <div class="row top-buffer-sm">
+            <div class="col text-center">
+                <h3 id="timer">30</h3>
+            </div>
+        </div>
+        <div class="row top-buffer-lg">
+            <div class="col text-center">
+                <h1 id="currentWord">PARROT</h1>
+            </div>
+        </div>
+        <div class="row fixed-bottom bottom-buffer">
+            <div class="col text-center btn-toolbar">
+                <button type="button" id="correctButton" class="btn btn-success btn-block btn-xl">CORRECT</button>
+                <button type="button" id="skipButton" class="btn btn-danger btn-block btn-xl">SKIP</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="content3" style="display:none">
+        <div class="row top-buffer justify-content-center"">
+            <div class="col text-center">
+                <h4 class="scoreBox">Team 1 score: 0p</h4>
+            </div>
+        </div>
+        <div class="row top-buffer-xl">
+            <div class="col text-center">
+                <h1 id="currentWord">Ready?</h1>
+            </div>
+        </div>
+        <div class="row fixed-bottom bottom-buffer">
+            <div class="col text-center btn-toolbar">
+                <button type="button" id="startTurn" class="btn btn-success btn-block btn-xl">Go!</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="content4" style="display:none">
+        <div class="row top-buffer">
+            <div class="col text-center">
+                <h2 id="teamHeader">Results</h2>
+            </div>
+        </div>
+        <div class="row top-buffer"">
+            <div class="col">
+                <h3 id="teamResults1"></h3>
+            </div>
+        </div>
+        <div class="row top-buffer"">
+            <div class="col">
+                <h3 id="teamResults2"></h3>
+            </div>
+        </div>
+        <div class="row top-buffer"">
+            <div class="col">
+                <h3 id="teamResults3"></h3>
+            </div>
+        </div>
+        <div class="row top-buffer"">
+            <div class="col">
+                <h3 id="teamResults4"></h3>
+            </div>
+        </div>
+        <div class="row top-buffer"">
+            <div class="col">
+                <h3 id="teamResults5"></h3>
+            </div>
+        </div>
+        <div class="row top-buffer"">
+            <div class="col">
+                <h3 id="teamResults6"></h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="main.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MAO</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href='style.css'>
+        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        </script>
+    </head>
+    <body>
+    	<div class="container" id="content">
+			<div class="row">
+				<div class="col-sm text-center">
+					<h1>MAO</h1>
+				</div>
+			</div>
+			<div class="row buttonGroup1">
+				<div class="col-sm-6">
+                    <button type="button" value="blue" class="btn btn-dark btn-lg">Label 1</button>
+				</div>
+                <div class="col-sm-6">
+                    <button type="button" value="blue" class="btn btn-dark btn-lg">Label 1</button>
+                </div>
+			</div>
+            <div class="row buttonGroup1">
+                <div class="col-sm-6">
+                    <button type="button" value="blue" class="btn btn-dark btn-lg">Label 2</button>
+                </div>
+                <div class="col-sm-6">
+                    <button type="button" value="blue" class="btn btn-dark btn-lg">Label 2</button>
+                </div>
+            </div>
+		</div>
+    </body>
+</html> -->

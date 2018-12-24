@@ -1,0 +1,59 @@
+body {
+    background-color: #2ba6cb;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+h6, h5, h4, h3 ,h2, h1 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+
+.top-buffer {
+    margin-top:40px; 
+}
+
+.top-buffer-lg {
+    margin-top:30%; 
+}
+
+.top-buffer-xl {
+    margin-top:60%; 
+}
+
+.top-buffer-md {
+    margin-top:15px; 
+}
+
+.top-buffer-sm {
+    margin-top:4px; 
+}
+
+.bottom-buffer {
+    margin-bottom:10px; 
+}
+
+.btn-large {
+    padding: 18px 28px;
+    font-size: 15px; //change this to your desired size
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+}
+
+.btn-xl {
+    padding: 18px 28px;
+    font-size: 30px; //change this to your desired size
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+}
